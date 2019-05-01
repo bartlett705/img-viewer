@@ -43,7 +43,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+    publicPath: '/bag/emoji',
     filename: 'bundle.[hash].js'
   },
   resolve: {
