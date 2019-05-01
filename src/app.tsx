@@ -58,4 +58,4 @@ const Thumbnail: React.FunctionComponent<{
 }> = ({ img, onClick }) => (
   <img className="thumb" onClick={onClick} src={constructSrc(img)} alt={img} />
 )
-const constructSrc = (filename: string) => `./emojii/${filename}`
+const constructSrc = (filename: string) => `./emoji/${filename}`

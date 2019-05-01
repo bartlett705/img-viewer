@@ -12,7 +12,7 @@ const plugins = [
     template: path.resolve(__dirname, 'index.html'),
     env: process.env.NODE_ENV
   }),
-  new DefinePlugin({ __FILES__: JSON.stringify(fs.readdirSync('./public/emojii')) })
+  new DefinePlugin({ __FILES__: JSON.stringify(fs.readdirSync('./public/emoji')) })
 ]
 
 if (!devMode) {
@@ -66,6 +66,6 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: './public'
+    contentBase: './public',
   }
 }

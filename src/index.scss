@@ -49,14 +49,14 @@ footer {
 
 header {
   animation: slidedown 2s ease-out 0s running;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 input {
   margin-left: 0.5rem;
 }
 
-main, footer {
+footer {
   position: fixed;
   bottom: 0;
   padding-bottom: 1rem;
@@ -74,5 +74,7 @@ main, footer {
 
 .current-image {
   justify-content: center;
+  flex-direction: column;
+  display: flex;
   height: 20rem;
 }
