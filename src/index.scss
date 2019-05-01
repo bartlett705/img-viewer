@@ -1,0 +1,78 @@
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  background-color: darkolivegreen;
+  font-family: 'Roboto', fixed-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  margin: 0.5rem;
+}
+
+h6 {
+  margin: 0.25rem;
+}
+
+main,
+footer {
+  display: flex;
+  max-width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-10rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(10rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+header {
+  animation: slidedown 2s ease-out 0s running;
+  padding-bottom: 2rem;
+}
+
+input {
+  margin-left: 0.5rem;
+}
+
+main, footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1rem;
+  animation: slideup 2s ease-out 0s running;
+}
+
+.thumb {
+  width: 3rem;
+  margin: 0.5rem;
+  &:hover {
+    width: 4rem;
+    margin: 0;
+  }
+}
+
+.current-image {
+  justify-content: center;
+  height: 20rem;
+}
