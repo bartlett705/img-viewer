@@ -35,7 +35,13 @@ action "Deploy" {
   needs = ["Filter master"]
   uses = "swinton/httpie.action@8ab0a0e926d091e0444fcacd5eb679d2e2d4ab3d"
   args = ["POST", "https://mosey.systems/api/vanatu", "action=completed", "repository=img-viewer", "X-Hub-Signature:$HUB_SIGNATURE"]
-  secrets = ["HUB_SIGNATURE"]
+  secrets = ["HUB_SECRET"]
+
+  # action "Unit Tests" {
+  #   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  #   needs = ["Install"]
+  #   args = "test"
+  # }
 }
 
 action "Notify Deploy End" {
