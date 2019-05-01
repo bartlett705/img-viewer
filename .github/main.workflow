@@ -32,7 +32,7 @@ action "Install" {
 # }
 
 action "Deploy" {
-  needs = ["Filter master", "Unit Tests"]
+  needs = ["Filter master"]
   uses = "swinton/httpie.action@8ab0a0e926d091e0444fcacd5eb679d2e2d4ab3d"
   args = ["POST", "https://mosey.systems/api/vanatu", "action=completed", "repository=img-viewer", "X-Hub-Signature:$HUB_SIGNATURE"]
   secrets = ["HUB_SIGNATURE"]
