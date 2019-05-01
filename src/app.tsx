@@ -1,4 +1,4 @@
-import { HamsNearMeLocation, trackPageview } from '@bartlett705/charcoal-client'
+import { EmojiGalleryLocation, trackPageview } from '@bartlett705/charcoal-client'
 import * as React from 'react'
 import './index.scss'
 
@@ -11,7 +11,7 @@ declare var __FILES__: string[]
 export const App = () => (
   <>
     <header>
-      <h2>Check out all of our cool Emoji</h2>
+      <h2>Check out all of our cool Emoji 🤓</h2>
     </header>
     <main>
       <ImgGallery />
@@ -30,9 +30,9 @@ interface State {
 
 class ImgGallery extends React.Component {
   public state: State = { currentImage: '' }
-  // public componentDidMount() {
-  //   trackPageview({ location: 'image-viewer' })
-  // }
+  public componentDidMount() {
+    trackPageview({ location: EmojiGalleryLocation.Front })
+  }
 
   public render() {
     return (
