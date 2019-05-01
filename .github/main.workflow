@@ -60,6 +60,6 @@ action "Notify Branch Start" {
 action "Notify Test End" {
   uses = "swinton/httpie.action@8ab0a0e926d091e0444fcacd5eb679d2e2d4ab3d"
   secrets = ["DC_ID", "DC_TOKEN"]
-  needs = ["Filter not master", "Unit Tests"]
+  needs = ["Filter not master"]
   args = ["POST", "https://discordapp.com/api/webhooks/$DC_ID/$DC_TOKEN", "username=GitHub", "content='`img-viewer` Tests Complete :tada: $GITHUB_SHA'"]
 }
