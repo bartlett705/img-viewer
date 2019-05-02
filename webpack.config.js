@@ -6,6 +6,7 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const DefinePlugin = require('webpack').DefinePlugin
 const fs = require('fs')
+const express = require('express')
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -66,6 +67,9 @@ module.exports = {
     ]
   },
   devServer: {
+    before(app) {
+      app.use('/bag/emoji', express.static('./public'))
+    },
     contentBase: './public',
   }
 }

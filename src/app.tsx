@@ -38,7 +38,7 @@ class ImgGallery extends React.Component {
     return (
       <>
       <div className="current-image">
-        <img src={constructSrc(this.state.currentImage)} />
+        {this.state.currentImage && <img src={constructSrc(this.state.currentImage)} />}
       </div>
       <div className="thumbs">
         {__FILES__.map((img: string) => (
